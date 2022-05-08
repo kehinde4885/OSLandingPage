@@ -1,1 +1,26 @@
+/*Style Reset*/
 
+html{
+    font-size: 62.5%;
+}
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*Proper Styles*/
+
+.header{
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.links {
+    
+}
