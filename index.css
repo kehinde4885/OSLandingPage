@@ -17,10 +17,90 @@ body{
 /*Proper Styles*/
 
 .header{
+    border: 1px solid red;
+    width: 100%;
     display: grid;
     grid-auto-flow: column;
+    height: 100px;
+    align-content: center;
+    position: absolute;
+
+    
 }
 
-.links {
+.header > div:nth-of-type(1){
     
+}
+
+.header > div:nth-of-type(1) img{
+    
+}
+
+.brand {
+    display: flex;
+
+}
+.links > ul {
+    list-style: none;
+    display: flex;
+
+}
+.hamburger{
+
+}
+.hamburger > div{
+    height: 2px;
+    width: 22px;
+    background-color: #000;
+    margin-bottom: 2px;
+    border: 1px solid;
+    border-radius: 1px;
+
+
+}
+
+.foot{
+    position: absolute;
+    top: 100vh;
+    transform: translateY(-100%);
+}
+
+.landing{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(6, 2fr);
+    grid-template-rows: 100px auto;
+    align-content: center;
+}
+
+.section-2{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(6, 2fr);
+    grid-template-rows: 100px auto;
+    align-content: center;
+}
+
+.projects{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(6, 2fr);
+    grid-template-rows: 100px auto;
+    align-content: center;
+}
+
+.testimonial{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(6, 2fr);
+    grid-template-rows: 100px auto;
+    align-content: center;
+}
+
+.contact{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(6, 2fr);
+    grid-template-rows: 100px auto;
+    align-content: center;
 }
