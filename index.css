@@ -14,6 +14,8 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
+
+
 /*Proper Styles*/
 
 .header{
@@ -85,12 +87,16 @@ ul{
     grid-template-columns: repeat(6, 2fr);
     align-items: center;
     background-image: url('images/bg1.jpg'); 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     color: #fff;
     display: none;
 }
+
+.bg-reset{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 .summary{
     justify-self: center;
@@ -129,6 +135,9 @@ ul{
     width: 7.142rem;
     margin-top: 13vh;
 }
+
+
+
 
 
 
@@ -214,17 +223,101 @@ ul{
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(6, 2fr);
-    grid-template-rows: 100px auto;
-    align-content: center;
+    align-items: center;
+    position: relative;
+    color: #fff;
 }
+
+.project-list{
+    grid-column: span 5;
+    width: 80%;
+}
+
+
+.project-list > p {
+    text-transform: uppercase;
+    margin-bottom: 5rem;
+    font-weight: 600;
+    font-size: 2.571rem;
+    letter-spacing: -0.025rem;
+}
+
+.layout-2 {
+    display: grid;
+    grid-template-columns: repeat(4 , 2fr);
+    gap: 2.14rem;
+    grid-template-rows: repeat(2 ,200px);
+}
+
+.layout-2 div {
+    border: 1px solid #fff;
+    padding: 2.14rem;3
+}
+
+.layout-2 div:hover{
+    background-color: #cee002;
+    color: #000;
+}
+
+.layout-2 h3 {
+    font-weight: 600;
+    font-size: 1.571rem;
+    letter-spacing: 0;
+    line-height: 1.1;
+}
+
+.bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+
+@media screen and (min-width: 1600px) {
+    .project-list{
+        max-width: 70%;
+    }
+}
+
+.anim{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s 0.2s ease , transform 5s 0.2s ease
+}
+
+.active {
+   opacity: 1;
+   transform: scale(1.05);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .testimonial{
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(6, 2fr);
-    grid-template-rows: 100px auto;
-    align-content: center;
-    display: none;
+    align-items: center;
 }
 
 .contact{
