@@ -22,12 +22,13 @@ body{
     width: 100%;
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 15% 20% 20% auto;
+    grid-auto-columns: 15% 20% 20% 40%;
     height: 7.14rem;
     align-items: center;
     justify-items: center;
     position: absolute;
-    color: #000;
+    color: #fff;
+    z-index: 100;
 
 }
 
@@ -76,10 +77,15 @@ ul{
 
 .foot{
     position: absolute;
-    top: 100vh;
+    top: 95vh;
+    left: 2vw;
     transform: translateY(-100%);
-    color: #000;
+    color: #fff;
+    z-index: 100;
 }
+
+
+
 
 .landing{
     height: 100vh;
@@ -88,7 +94,8 @@ ul{
     align-items: center;
     background-image: url('images/bg1.jpg'); 
     color: #fff;
-    display: none;
+    z-index: 5;
+
 }
 
 .bg-reset{
@@ -146,7 +153,8 @@ ul{
     display: grid;
     grid-template-columns: repeat(6, 2fr);
     align-items: center;
-    display: none;
+    z-index: 4;
+
 }
 
 
@@ -218,14 +226,17 @@ ul{
 
 
 
+.section-3{
+    z-index: 3;
+}
 
 .projects{
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(6, 2fr);
     align-items: center;
-    position: relative;
     color: #fff;
+    position: relative;
 }
 
 .project-list{
@@ -251,7 +262,7 @@ ul{
 
 .layout-2 div {
     border: 1px solid #fff;
-    padding: 2.14rem;3
+    padding: 2.14rem;
 }
 
 .layout-2 div:hover{
@@ -306,25 +317,173 @@ ul{
 
 
 
-
-
-
-
-
-
-
 .testimonial{
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(6, 2fr);
     align-items: center;
+    background-image: url(images/bg3.jpg);
+    color: #fff;
+    z-index: 2;
+    
 }
+
+
+.layout-3{
+    grid-column: span 5;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    gap: 15vh;
+}
+
+
+.layout-3 > div:nth-of-type(1) svg{
+    font-size: 5.14rem;
+    color: #cee002;
+
+}
+
+.layout-3 > div:nth-of-type(1) p{
+    margin-top: 22vh;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 2.571rem;
+}
+
+.testimony{
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.142rem;
+    line-height: 1.875;
+    letter-spacing: 0.025rem;
+}
+
+.testimony p{
+    margin-bottom: 2.6rem;
+}
+
+.testimony span{
+    display: block;
+}
+
+.toggle{
+    display: flex;
+    flex-direction: row;
+    margin-top: 7.7vh;
+}
+
+.toggle div{
+    border: 1px solid #fff;
+    font-size: 2.2857rem;
+    height: 3.57rem;
+    width: 3.57rem;
+    margin-right: 0.857rem;
+    text-align: center;
+
+}
+
+.author-name{
+    font-size: 1.2857rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 5.7rem;
+}
+
+
+
+
+
+
 
 .contact{
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(6, 2fr);
-    grid-template-rows: 100px auto;
-    align-content: center;
-    display: none;
+    align-items: center;
+    z-index: 1;
 }
+
+.layout-4{
+    grid-column: span 5;
+    
+}
+
+.layout-4 > h2{
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 5rem;
+    font-size: 2.571rem;
+
+}
+
+.contact-info{
+    max-width: 70%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 5.5rem;
+}
+
+.contact-info h3{
+    padding-right: 15px;
+    padding-left: 15px;
+    font-weight: 600;
+    font-size: 1.92rem;
+    text-transform: uppercase;
+
+}
+
+.contact-info > div:nth-child(n+2){
+    border-left: 1px solid #cacaca;
+}
+
+.contact-grid{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-items: center;
+}
+
+.contact-grid > div:nth-of-type(2){
+    grid-column-start: 2;
+}
+
+.text-dark{
+    font-size: 1.1428rem;
+    text-transform: uppercase;
+    line-height: 1.5;
+    font-weight: bold;
+}
+
+/*Carousel*/
+
+.layer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-cont{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.18rem;
+    color: #fff;
+    align-items: center;
+    z-index: 100;
+
+}
+
+.carousel-cont > ul {
+     margin: 3rem 0 ;
+}
+
+.hole{
+    background: #ddd;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 50%;
+}
+
