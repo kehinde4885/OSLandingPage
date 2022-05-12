@@ -95,6 +95,7 @@ ul{
     background-image: url('images/bg1.jpg'); 
     color: #fff;
     z-index: 5;
+    opacity: 0;
 
 }
 
@@ -133,12 +134,12 @@ ul{
 }
 
 .highlight{
-    color: #cee002;
+    color: #BC4749;
 }
 
 .hr{
     height: .2858rem;
-    background-color: #cee002;
+    background-color: #BC4749;
     width: 7.142rem;
     margin-top: 13vh;
 }
@@ -154,9 +155,24 @@ ul{
     grid-template-columns: repeat(6, 2fr);
     align-items: center;
     z-index: 4;
+    background-color: #fff;
+    animation-name: slidein;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    opacity: 0;
 
 }
 
+@keyframes slidein{
+
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
 
 .container {
     grid-column: span 5;
@@ -228,6 +244,7 @@ ul{
 
 .section-3{
     z-index: 3;
+    opacity: 0;
 }
 
 .projects{
@@ -266,7 +283,7 @@ ul{
 }
 
 .layout-2 div:hover{
-    background-color: #cee002;
+    background-color: #BC4749;
     color: #000;
 }
 
@@ -325,6 +342,7 @@ ul{
     background-image: url(images/bg3.jpg);
     color: #fff;
     z-index: 2;
+    opacity: 0;
     
 }
 
@@ -340,7 +358,6 @@ ul{
 
 .layout-3 > div:nth-of-type(1) svg{
     font-size: 5.14rem;
-    color: #cee002;
 
 }
 
@@ -401,6 +418,7 @@ ul{
     grid-template-columns: repeat(6, 2fr);
     align-items: center;
     z-index: 1;
+    opacity: 0;
 }
 
 .layout-4{
@@ -459,6 +477,11 @@ ul{
     position: absolute;
     width: 100%;
     height: 100%;
+    transform: translate3d(0, 0 ,0 );
+    transition: all;
+    transition-timing-function: ease;
+    transition-delay: .1s;
+    transition-duration: .5s ;
 }
 
 .carousel-cont{
@@ -485,5 +508,25 @@ ul{
     height: 10px;
     display: inline-block;
     border-radius: 50%;
+}
+
+.hidden{
+    transform: translateY(-100%)
+}
+
+.visible{
+    opacity: 1;
+}
+
+.black{
+    color: #000;
+}
+
+.newbg{
+    background-color: #000;
+}
+
+.indicate{
+    background-color: #BC4749;
 }
 
