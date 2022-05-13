@@ -12,6 +12,7 @@ html{
 
 body{
     font-family: 'Poppins', sans-serif;
+    overflow: hidden;
 }
 
 
@@ -68,9 +69,19 @@ ul{
 .links li{
     margin-left: 2rem;
 }
+
+.links li:hover{
+    color: #BC4749;
+}
+
+.links a{
+    color: #fff;
+}
+
 .hamburger{
     justify-self: end;
     font-size: 1.5rem;
+    cursor: pointer;
 
 }
 
@@ -498,6 +509,14 @@ ul{
 
 }
 
+.carousel-cont > div , ul{
+    cursor: pointer;
+}
+
+.carousel-cont > div:hover{
+    color: #BC4749;
+}
+
 .carousel-cont > ul {
      margin: 3rem 0 ;
 }
@@ -530,3 +549,70 @@ ul{
     background-color: #BC4749;
 }
 
+
+
+/*Menu*/
+
+.menu{
+    overflow: hidden;
+    height: 100vh;
+    width: 35vw;
+    position: absolute;
+    right: 0;
+    z-index: 500;
+    top: 0;
+    background-color: #fff;
+    display: grid;
+   place-items: center;
+   transform: translateX(100%);
+   transition: all .6s ease
+}
+
+.menu > ul:nth-of-type(1) li {
+    font-size: 2.571rem;
+    font-weight: 600;
+    color: #999;
+    margin-top: 2.6rem;
+    transition: color .3s ease;
+}
+
+.menu > ul:nth-of-type(1) li:hover{
+    color: #000;
+}
+
+.menu a{
+    text-decoration: none;
+}
+
+.links-2 > ul {
+    display: flex;
+    
+}
+
+.links-2 li{
+    font-size: 1.428rem;
+}
+
+.links-2 li:nth-of-type(n+1){
+    margin-right: 2rem;
+    
+}
+
+.links-2 li:hover{
+    color: #BC4749;
+}
+
+.links-2 a{
+    color: #999;
+}
+
+.close{
+    justify-self: flex-end;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-right: 15%;
+}
+
+.view{
+    transform: translateX(0%);
+}
