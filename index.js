@@ -6,6 +6,8 @@ const elements = Array.from(element.children)
 
 let backgrounds = Array.from(bg.children)
 
+todo = 55
+
 
 elements[0].addEventListener('mouseenter', function () {
     for (i = 0; i < elements.length; i++) {
