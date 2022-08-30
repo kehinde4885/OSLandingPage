@@ -75,7 +75,7 @@ ul{
 }
 
 .links a{
-    color: #fff;
+    color: inherit;
 }
 
 .hamburger{
@@ -96,19 +96,24 @@ ul{
 }
 
 
+/*YYYY*/
 
-
-.landing{
+section.landing{
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(6, 2fr);
     align-items: center;
-    background-image: url('images/bg1.jpg'); 
+    background-image: url('images/ld1.jpg');
+    background-size: cover;
     color: #fff;
-    z-index: 5;
-    opacity: 0;
+    z-index: 6;
+    transition-property: transform , background-image;
+    transition-timing-function: ease ,  ease;
+    transition-delay: .1s , .1s;
+    transition-duration: .5s , 3s;
 
 }
+
 
 .bg-reset{
     background-position: center;
@@ -155,9 +160,7 @@ ul{
     margin-top: 13vh;
 }
 
-
-
-
+/*YYYYY*/
 
 
 .section-2{
@@ -165,25 +168,11 @@ ul{
     display: grid;
     grid-template-columns: repeat(6, 2fr);
     align-items: center;
-    z-index: 4;
+    z-index: 5;
     background-color: #fff;
-    animation-name: slidein;
-    animation-duration: 2s;
-    animation-timing-function: ease;
-    opacity: 0;
 
 }
 
-@keyframes slidein{
-
-    from{
-        opacity: 0;
-    }
-
-    to{
-        opacity: 1;
-    }
-}
 
 .container {
     grid-column: span 5;
@@ -214,12 +203,13 @@ ul{
 
 .layout-1 {
     position: relative;
+    align-self: center;
 }
 
 .layout-1 > p {
     font-size: 1.57rem;
     position: absolute;
-    bottom: 0;
+    bottom: -20%;
     display: flex;
     left: 10%;
     font-weight: 600;
@@ -243,19 +233,57 @@ ul{
     width: 100%;
     height: 50%;
     position: absolute;
-    top: 50%;
+    top: 70%;
     left: -25%;
     z-index: -1;
 }
 
-
-
-
-
-
+/*YYYY*/
 .section-3{
+    z-index: 4;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(6 , 2fr);
+    align-items: center;
+}
+
+.section-3 > main {
+    grid-column: span 5;
+    height: 100%;
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+    
+}
+
+.section-3 div:nth-of-type(1){
+    flex-basis: 40%;
+    font-size: 1.1rem;
+}
+
+.section-3 div:nth-of-type(1) > h2 {
+    font-size: 2.571rem;
+    text-transform: uppercase;
+    margin-bottom: 1.2em;
+
+}
+.section-3 div:nth-of-type(1) > p {
+    margin-bottom: 1em;
+}
+.section-3 div:nth-of-type(2){
+
+}
+
+.section-3 img{
+    width: 100%;
+}
+
+/*YYYY*/
+
+
+.section-4{
     z-index: 3;
-    opacity: 0;
 }
 
 .projects{
@@ -339,7 +367,7 @@ ul{
 
 
 
-
+/*YYYY*/
 
 
 
@@ -353,7 +381,6 @@ ul{
     background-image: url(images/bg3.jpg);
     color: #fff;
     z-index: 2;
-    opacity: 0;
     
 }
 
@@ -362,10 +389,13 @@ ul{
     grid-column: span 5;
     display: flex;
     flex-direction: row;
-    width: 80%;
-    gap: 15vh;
+    width: 90%;
+    justify-content: space-around;
 }
 
+.layout-3 > div:nth-of-type(1){
+    flex-basis: 50%;
+}
 
 .layout-3 > div:nth-of-type(1) svg{
     font-size: 5.14rem;
@@ -379,13 +409,24 @@ ul{
     font-size: 2.571rem;
 }
 
+.testimonials{
+    position: relative;
+    flex-basis: 40%;
+}
+
 .testimony{
     font-family: 'Libre Baskerville', serif;
     font-size: 1.142rem;
     line-height: 1.875;
     letter-spacing: 0.025rem;
+    position: absolute;
+    transition: opacity 2s ease;
 }
 
+.testimonials .testimony.active{
+    opacity: 0;
+    transform: scale(1);
+}
 .testimony p{
     margin-bottom: 2.6rem;
 }
@@ -397,7 +438,10 @@ ul{
 .toggle{
     display: flex;
     flex-direction: row;
-    margin-top: 7.7vh;
+    /* margin-top: 7.7vh; */
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
 }
 
 .toggle div{
@@ -420,7 +464,7 @@ ul{
 
 
 
-
+/*YYYYY*/
 
 
 .contact{
@@ -429,7 +473,6 @@ ul{
     grid-template-columns: repeat(6, 2fr);
     align-items: center;
     z-index: 1;
-    opacity: 0;
 }
 
 .layout-4{
@@ -440,11 +483,14 @@ ul{
 .layout-4 > h2{
     text-transform: uppercase;
     font-weight: 600;
-    margin-bottom: 5rem;
+    margin-bottom: .5rem;
     font-size: 2.571rem;
 
 }
 
+.layout-4 > p {
+    margin-bottom: 4.5rem;
+}
 .contact-info{
     max-width: 70%;
     display: grid;
@@ -489,10 +535,11 @@ ul{
     width: 100%;
     height: 100%;
     transform: translate3d(0, 0 ,0 );
-    transition: all;
-    transition-timing-function: ease;
-    transition-delay: .1s;
-    transition-duration: .5s ;
+    opacity: 0;
+    transition-property: transform , opacity;
+    transition-timing-function: ease , ease;
+    transition-delay: .1s , .1s;
+    transition-duration: .5s , .5s;
 }
 
 .carousel-cont{
