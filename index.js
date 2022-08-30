@@ -276,3 +276,48 @@ function hideMenu(){
     menu.classList.remove('view')
 }
 
+
+const toggle = document.querySelector('.toggle').children
+
+const testimonies = document.querySelectorAll('.testimony')
+
+toggle[1].addEventListener('click', nextTest)
+
+toggle[0].addEventListener('click', prevTest)
+
+
+let tPosition = 0
+
+function prevTest(){
+    if(tPosition === 0){
+
+    }else{
+
+    testimonies[tPosition].classList.remove('active')
+
+    testimonies[tPosition - 1].classList.add('active')
+
+    tPosition--
+
+    }
+
+}
+
+function nextTest(){
+    if(tPosition < testimonies.length - 1){
+
+    testimonies[tPosition].classList.remove('active')
+
+    testimonies[tPosition + 1].classList.add('active')
+
+    console.log(testimonies)
+
+    tPosition++
+
+
+    }else{}
+    
+    
+
+
+}
