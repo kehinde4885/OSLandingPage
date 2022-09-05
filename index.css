@@ -19,6 +19,7 @@ body{
 
 /*Proper Styles*/
 
+/*header and NAv*/
 .header{
     width: 100%;
     display: grid;
@@ -32,6 +33,7 @@ body{
     z-index: 100;
 
 }
+
 
 
 .brand {
@@ -103,15 +105,21 @@ section.landing{
     display: grid;
     grid-template-columns: repeat(6, 2fr);
     align-items: center;
-    background-image: url('images/ld1.jpg');
-    background-size: cover;
     color: #fff;
     z-index: 6;
-    transition-property: transform , background-image;
-    transition-timing-function: ease ,  ease;
-    transition-delay: .1s , .1s;
-    transition-duration: .5s , 3s;
+    transition-property: transform;
+    transition-timing-function: ease ;
+    transition-delay: .1s;
+    transition-duration: .5s ;
 
+}
+
+
+.landingbg{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
 }
 
 
@@ -120,6 +128,25 @@ section.landing{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.landingbg .bg-reset.active{
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+.bgdiv{
+    position: absolute;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    transition-property: opacity;
+    transition-timing-function: ease;
+    transition-delay:  .1s;
+    transition-duration: 3s;
+    
+}
+
 
 
 .summary{
@@ -361,7 +388,6 @@ section.landing{
 .active {
    opacity: 1;
    transform: scale(1.05);
-
 }
 
 
@@ -420,11 +446,12 @@ section.landing{
     line-height: 1.875;
     letter-spacing: 0.025rem;
     position: absolute;
+    opacity: 0;
     transition: opacity 2s ease;
 }
 
 .testimonials .testimony.active{
-    opacity: 0;
+    opacity: 1;
     transform: scale(1);
 }
 .testimony p{
@@ -606,7 +633,7 @@ section.landing{
     width: 35vw;
     position: absolute;
     right: 0;
-    z-index: 500;
+    z-index: 101;
     top: 0;
     background-color: #fff;
     display: grid;

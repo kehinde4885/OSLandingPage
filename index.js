@@ -6,9 +6,10 @@ const projects = Array.from(element.children)
 
 let backgrounds = Array.from(bg.children)
 
-let landing = document.querySelector('.landing')
 
-let index = 1;
+let landing = document.querySelector('.landingbg')
+
+let index = 0;
 
 let slidePosition = 0
 
@@ -50,7 +51,7 @@ close.addEventListener('click', hideMenu)
 
 setInterval(landingSwitch , 10000)
 
-
+//create carousel Dots
 for(page of pages){
 
     let li = document.createElement('li')
@@ -74,28 +75,33 @@ for(let i=0 ; i< grpOfIndicator.length; i++){
 }
 
 
+
+//Animate Landing BackGround
+
 function landingSwitch(){
 
 if(landing.className.includes('hidden')){
 
 }else{
-
-    if(index < 5){
+    if(index <= 3){
+        landing.children[index].classList.remove('active')
         index++
-    }else if(index >= 5){
-        index = 1
+        landing.children[index].classList.add('active')
+    }else if(index > 3){
+        landing.children[index].classList.remove('active')
+        index = 0
+         landing.children[index].classList.add('active') 
     }
     console.log(index)
-}
-    landing.style.backgroundImage = `url('images/ld${index}.jpg')`
-
-
+    }
 }
 
+//Animate PRojects BG
 
 projects.forEach(element => {
     element.addEventListener('mouseenter', go)
 });
+
 
 function go(e){
     let index = projects.indexOf(e.target)
@@ -113,7 +119,7 @@ function go(e){
 }
 
 
-//Okay
+//Change Logo during Page Transition
 function changeLogo(){
 
     let blackLogo = `images/brand.png`
@@ -130,6 +136,7 @@ function changeLogoWhite(){
 
 }
 
+//Indicate page user is on
 
 function indicate(){
     indicator.forEach(element => {
@@ -139,7 +146,7 @@ function indicate(){
 }
 
 
-//Okay
+//Animate Sections
 
 function moveToNextSlide() {
     if (slidePosition === pages.length - 1) {
@@ -204,13 +211,14 @@ function toggleColor() {
 }
 
 
-
+//Turn indicators to buttons to nav sections
 indicator.forEach(element => {
 
     element.addEventListener('click', naviga)
     
 });
 
+//Menu Buttons
 navigate.forEach(element => {
     element.addEventListener('click', naviga2)
 })
@@ -221,8 +229,6 @@ function naviga(e){
     console.log(e)
 
     let index = indicator.indexOf(e.target)
-
-    let index2 = navigate.indexOf(e.target)
 
     console.log(index)
 
@@ -256,7 +262,7 @@ function naviga2(e){
 
 }
 
-
+//Navigate with Keyboard
 function hot(e){
     let x = e.code
     console.log(x)
@@ -285,6 +291,8 @@ toggle[1].addEventListener('click', nextTest)
 
 toggle[0].addEventListener('click', prevTest)
 
+
+//Testimony Carousel
 
 let tPosition = 0
 
@@ -316,8 +324,6 @@ function nextTest(){
 
 
     }else{}
-    
-    
 
 
 }
