@@ -9,6 +9,8 @@ let backgrounds = Array.from(bg.children)
 
 let landing = document.querySelector('.landingbg')
 
+let landContainer = document.querySelector('.landing')
+
 let index = 0;
 
 let slidePosition = 0
@@ -80,9 +82,8 @@ for(let i=0 ; i< grpOfIndicator.length; i++){
 
 function landingSwitch(){
 
-if(landing.className.includes('hidden')){
-
-}else{
+if(landContainer.className.includes('hidden')){}
+else{
     if(index <= 3){
         landing.children[index].classList.remove('active')
         index++
@@ -92,7 +93,7 @@ if(landing.className.includes('hidden')){
         index = 0
          landing.children[index].classList.add('active') 
     }
-    console.log(index)
+    
     }
 }
 
@@ -226,11 +227,9 @@ navigate.forEach(element => {
 
 function naviga(e){
     
-    console.log(e)
 
     let index = indicator.indexOf(e.target)
 
-    console.log(index)
 
     while(slidePosition > index){
         moveToPrevSlide()
@@ -245,11 +244,9 @@ function naviga(e){
 
 function naviga2(e){
     
-    console.log(e)
 
     let index = navigate.indexOf(e.target)
 
-    console.log(index)
 
     while(slidePosition > index){
         moveToPrevSlide()
@@ -265,7 +262,6 @@ function naviga2(e){
 //Navigate with Keyboard
 function hot(e){
     let x = e.code
-    console.log(x)
 
     if(e.code === 'ArrowUp'){
         moveToPrevSlide()
@@ -318,7 +314,6 @@ function nextTest(){
 
     testimonies[tPosition + 1].classList.add('active')
 
-    console.log(testimonies)
 
     tPosition++
 
