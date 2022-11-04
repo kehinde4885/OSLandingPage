@@ -507,8 +507,7 @@ body{
     }
     
     .layout-4{
-        grid-column: span 5;
-        
+        grid-column: span 5;   
     }
     
     .layout-4 > h2{
@@ -692,5 +691,9 @@ body{
     .view{
         transform: translateX(0%);
     } 
+
+    .mobile-menu {
+        display: none;
+    }
 }
 

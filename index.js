@@ -23,8 +23,9 @@ let carDown = document.getElementById('caro-down')
 const colorGroup = Array.from(document.querySelectorAll('.white'))
 
 
-
 const navigate = Array.from(document.getElementsByClassName('navigate'))
+
+
 
 let pages = Array.from(document.getElementsByClassName('layer'))
 
@@ -36,9 +37,15 @@ let groupOfHoles = document.querySelector('.holes')
 
 let hamburger = document.querySelector('.hamburger')
 
+
+
 let close = document.querySelector('.close')
 
+
+
 let menu = document.querySelector('.menu')
+
+
 
 
 carDown.addEventListener('click', moveToNextSlide)
@@ -49,7 +56,11 @@ document.addEventListener('keydown', hot)
 
 hamburger.addEventListener('click', viewMenu)
 
+
+
 close.addEventListener('click', hideMenu)
+
+
 
 setInterval(landingSwitch , 10000)
 
@@ -214,7 +225,6 @@ function toggleColor() {
 
 //Turn indicators to buttons to nav sections
 indicator.forEach(element => {
-
     element.addEventListener('click', naviga)
     
 });
@@ -224,7 +234,7 @@ navigate.forEach(element => {
     element.addEventListener('click', naviga2)
 })
 
-
+//Dot Buttons
 function naviga(e){
     
 
@@ -242,6 +252,8 @@ function naviga(e){
 
 }
 
+
+//Menu Buttons
 function naviga2(e){
     
 
@@ -277,6 +289,7 @@ function viewMenu(){
 function hideMenu(){
     menu.classList.remove('view')
 }
+
 
 
 const toggle = document.querySelector('.toggle').children
@@ -320,5 +333,38 @@ function nextTest(){
 
     }else{}
 
+
+}
+
+// Mobile Only
+const navigateMob = Array.from(document.getElementsByClassName('navigate-mob'))
+
+let closeMobile = document.querySelector('.close-mob')
+
+let hamburgerMob = document.querySelector('.hamburger-mob')
+
+let mobileMenu = document.querySelector('.mobile-menu')
+
+closeMobile.addEventListener('click',hideMenuMobile)
+
+hamburgerMob.addEventListener('click', viewMenuMobile)
+
+
+function viewMenuMobile(){
+    mobileMenu.classList.add('view')
+}
+
+function hideMenuMobile(){
+    mobileMenu.classList.remove('view')
+}
+
+console.log(navigateMob)
+navigateMob.forEach(element => {
+    element.addEventListener('click', naviga3)
+})
+
+function naviga3(e){
+
+    hideMenuMobile()
 
 }
