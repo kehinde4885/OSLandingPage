@@ -141,6 +141,7 @@
         top: 95vh;
         display: flex;
         justify-content: space-between;
+        display: none;
     }
 
     .landing{
@@ -309,15 +310,16 @@
     /*YY*/
     .section-4{
         order: 3;
+        position: relative;
     }
     
     .projects {
-        
         height: 100vh;
         background-image: url(./images/bg2-2.jpg);
         color: #fff;
         display: grid;
         align-content: center;
+        
     }
 
     .project-list > p {
@@ -346,6 +348,30 @@
 
     .layout-2 > div:nth-child(2n+1){
         display: none;
+    }
+
+    .modal {
+        /* position: absolute;
+        top: 0; */
+        display: flex;
+        /* width: 90%; */
+        height: 60%;
+        padding: 0 5%;
+        /* margin: 0 auto; */
+        background-color: #fff;
+        justify-content: space-around;
+    }
+
+    .modal-content {
+        /* height: 90%;
+        width: 80%; */
+        display: flex;
+
+    }
+
+    .modal-content img {
+        width: 100%;
+        object-fit: cover; 
     }
     /*YY*/
 
@@ -492,5 +518,7 @@
         line-height: 1.5;
         font-weight: bold;
     } 
+
+    
     
 }
