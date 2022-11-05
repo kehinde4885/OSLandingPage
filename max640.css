@@ -73,7 +73,6 @@
        place-items: center;
        transform: translateX(100%);
        transition: all .6s ease;
-       display: none;
     }
     
     .mobile-menu > ul {
