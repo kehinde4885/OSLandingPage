@@ -69,6 +69,7 @@
         position: absolute; 
         z-index: 101;
         top: 0;
+        right: -5vw;
         background-color: #fff;
         display: grid;
        place-items: center;
