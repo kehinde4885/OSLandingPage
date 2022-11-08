@@ -52,7 +52,6 @@ hamburger.addEventListener('click', viewMenu)
 close.addEventListener('click', hideMenu)
 
 setInterval(landingSwitch , 10000)
-
 //create carousel Dots
 for(page of pages){
 
@@ -75,6 +74,7 @@ for(let i=0 ; i< grpOfIndicator.length; i++){
    
     groupOfHoles.append(grpOfIndicator[i])
 }
+toggleColor()
 
 
 
@@ -189,7 +189,7 @@ function moveToPrevSlide() {
 
 function toggleColor() {
 
-    if (slidePosition === 1 || slidePosition === 2 || slidePosition === 5) {
+    if (slidePosition === 0 ||slidePosition === 1 || slidePosition === 2 || slidePosition === 5) {
         changeLogo()
         for (let i = 0; i < colorGroup.length; i++) {
             colorGroup[i].classList.add('black')
@@ -198,7 +198,7 @@ function toggleColor() {
             element.classList.add('newbg')
         });
     }
-    else if(slidePosition === 0 || slidePosition === 3 || slidePosition === 4) {
+    else if( slidePosition === 3 || slidePosition === 4) {
         changeLogoWhite()
         for (let i = 0; i < colorGroup.length; i++) {
             colorGroup[i].classList.remove('black')
