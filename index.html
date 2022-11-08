@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="max640.css">
     <title>OricSpace</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +17,7 @@
 </head>
 
 <body>
-    <section class=" white header">
+    <section class=" white header mob-center">
         <div class="brand">
             <img class="logo " src="images/brand-white.png" alt="Oricspace logo">
             <div class="highlight">
@@ -49,7 +50,13 @@
             </ul>
         </nav>
 
+        <!-- Desktop Only -->
         <div class="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <!-- Mobile Only -->
+        <div class="hamburger-mob">
             <i class="fa-solid fa-bars"></i>
         </div>
 
@@ -86,6 +93,7 @@
 
     </section>
 
+    <!-- Desktop  -->
     <nav class="menu">
 
         <div class="close">
@@ -136,12 +144,64 @@
 
     </nav>
 
-    <section class=" visible layer landing">
+
+    <!-- Mobile -->
+    <nav class="mobile-menu">
+
+        <div class="close-mob">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <ul>
+            <a href="#home">
+                <li class="navigate-mob">Home</li>
+            </a>
+            <a href="#services">
+                <li class="navigate-mob">Services</li>
+            </a>
+            <a href="#about">
+                <li class="navigate-mob">About</li>
+            </a>
+            <a href="#projects">
+                <li class="navigate-mob">Projects</li>
+            </a>
+            <a href="#testimonials">
+                <li class="navigate-mob">Testimonials</li>
+            </a>
+            <a href="#contact">
+                <li class="navigate-mob">Contact</li>
+            </a>
+        </ul>
+
+        <div class="links-2">
+            <ul>
+                <a href="#">
+                    <li><i class="fa-brands fa-twitter"></i></li>
+                </a>
+                <a href="#">
+                    <li><i class="fa-brands fa-facebook-f"></i></li>
+                </a>
+                <a href="#">
+                    <li><i class="fa-brands fa-google-plus-g"></i></li>
+                </a>
+                <a href="#">
+                    <li><i class="fa-brands fa-linkedin"></i></li>
+                </a>
+                <a href="#">
+                    <li><i class="fa-brands fa-dribbble"></i></li>
+                </a>
+            </ul>
+
+
+        </div>
+
+    </nav>
+
+    <section class=" visible layer landing" id="home">
         <div class="summary">
             <p>Introduce</p>
         </div>
-        <div>
-            <p class="top-text">Welcome to <br>Oricspace Design Studio</p>
+        <div class="mob-center">
+            <p class="top-text">Welcome to <br>Oricspace Interior Studio</p>
             <h1><span class="highlight">Imagining</span> is key <br> to more <br>Creativity</h1>
             <div class="hr"></div>
         </div>
@@ -154,11 +214,11 @@
         </div>
     </section>
 
-    <section class="layer section-2">
+    <section class="layer section-2" id="services">
         <div class="summary">
             <p>What we do</p>
         </div>
-        <div class="container">
+        <div class="container mob-center">
             <div>
                 <p class="top-text">Our Specialization</p>
                 <h2>Our Mission is <br>to <span class="highlight">design & develop</span><br> the best designs around
@@ -191,7 +251,7 @@
 
     </section>
 
-    <section class="section-3 layer">
+    <section class="section-3 layer mob-center" id="about">
         <p class="summary">Who we are</p>
         <main>
             <div>
@@ -222,12 +282,12 @@
 
     </section>
 
-    <section class="layer section-4">
+    <section class="layer section-4" id="projects">
         <main class="projects">
             <div class="summary">
                 <p>Our Works</p>
             </div>
-            <div class="project-list">
+            <div class="project-list mob-center">
                 <p>Latest Projects</p>
                 <div class="layout-2" id="layout-2">
                     <div>
@@ -278,15 +338,23 @@
                 <div class="anim bg-reset" style="background-image: url(images/bg2-9.jpg);"></div>
             </div>
         </main>
+<!-- 
+        <div class="modal">
+            <div class="modal-content">
+                <img src="./images/ld5.jpg" alt="">
+
+            </div>
+
+        </div> -->
 
     </section>
 
-    <section class="layer testimonial bg-reset">
+    <section class="layer testimonial bg-reset" id="testimonials">
         <div class="summary">
             <p>Testimonials</p>
         </div>
 
-        <main class="layout-3">
+        <main class="layout-3 mob-center">
             <div>
                 <i class=" highlight fa-solid fa-quote-right"></i>
                 <p>Creative & Dedicated is the things
@@ -334,11 +402,11 @@
 
     </section>
 
-    <section class="layer contact">
+    <section class="layer contact" id="contact">
 
         <p class="summary">Contact</p>
-        <main class="layout-4">
-            <h2>Let's Bring Your Dreams To Reality</h2>
+        <main class="layout-4 mob-center">
+            <h2>Let's Bring Your Drams To Reality</h2>
             <p>Give us a call or drop by anytime, we endeavor to answer all enquiries within 24 hours on business days. We will be happy to answer your questions and work with you.</p>
 
             <div class="contact-info">
