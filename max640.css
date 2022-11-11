@@ -61,6 +61,10 @@
         display: none;
     }
 
+    .bg{
+        display: none;
+    }
+
     .mobile-menu {
         height: 100vh;
         width: 100vw;
