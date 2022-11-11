@@ -157,6 +157,10 @@
         grid-column-start: 1;
         display: grid;
         align-content: center;
+        background-image: url(./images/ld1.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     .landingbg{
@@ -169,8 +173,12 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        display: none;
     }
     
+    .bg-div{
+        display: none;
+    }
     
     .bg-reset{
         background-position: center;
