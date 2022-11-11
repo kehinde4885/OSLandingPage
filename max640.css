@@ -127,6 +127,7 @@
     
     .view{
         transform: translateX(0%);
+        display: grid;
     } 
 
     /*YYYY*/
@@ -378,7 +379,7 @@
     .testimonial{
         order: 5;
         height: 100vh;
-        background-image: url(images/bg3.jpg);
+        background-image: url(images/bg33.jpg);
         color: #fff;
         background-position: center;
         background-repeat: no-repeat;
