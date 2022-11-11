@@ -62,8 +62,6 @@
     }
 
     .mobile-menu {
-        
-        overflow: hidden;
         height: 100vh;
         width: 100vw;
         position: absolute; 
@@ -75,6 +73,7 @@
        place-items: center;
        transform: translateX(100%);
        transition: all .6s ease;
+       display: none;
     }
     
     .mobile-menu > ul {
